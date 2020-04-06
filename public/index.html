@@ -14,5 +14,19 @@
         </div>
         
         <script src="scripts/app.js"></script>
+
+        <div id="exercise">
+            <p>{{ name }}</p>
+            <p>{{ age * 3 }}</p>
+            <p>{{ getRandomNum() }}</p>
+            <div>
+                <img v-bind:src="image">
+            </div>
+            <div>
+                <input type="text" v-bind:value="name">
+            </div>
+        </div>
+
+        <script src="scripts/exercise.js"></script>
     </body>
 </html>
