@@ -25,6 +25,11 @@
             <div>
                 <input type="text" v-bind:value="name">
             </div>
+            <button v-on:click="showAlert">Show Alert</button>
+            <div>
+                <input type="text" name="" id="" v-on:keydown.enter="saveValue">
+                <p>{{ value }}</p>
+            </div>
         </div>
 
         <script src="scripts/exercise.js"></script>
