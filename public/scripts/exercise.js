@@ -30,4 +30,11 @@ new Vue({
             this.value = event.target.value
         }
     }
+}),
+new Vue({
+    el: '#styleex',
+    methos: {
+        startEffect: function() {
+        }
+    }
 })

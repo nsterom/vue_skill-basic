@@ -2,7 +2,7 @@
 <html>
     <head>
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
-
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <div id="app">
@@ -41,6 +41,13 @@
             <div>
                 <input type="text">
                 <p>{{ value }}</p>
+            </div>
+        </div>
+
+        <div id="styleex">
+            <div>
+                <button @click="startEffect">Start Effect</button>
+                <div id="effect"></div>
             </div>
         </div>
 
