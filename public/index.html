@@ -30,6 +30,18 @@
                 <input type="text" name="" id="" v-on:keydown.enter="saveValue">
                 <p>{{ value }}</p>
             </div>
+
+            <div>
+                <p>Current Value: {{ value }}</p>
+                <button @click="value += 5">add 5</button>
+                <button @click="value += 1">add 1</button>
+                <p>{{ result }}</p>
+            </div>
+
+            <div>
+                <input type="text">
+                <p>{{ value }}</p>
+            </div>
         </div>
 
         <script src="scripts/exercise.js"></script>
