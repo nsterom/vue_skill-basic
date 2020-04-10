@@ -37,6 +37,18 @@ new Vue({
         effectClasses: {
             highlight: false,
             shrink: true
+        },
+        float: 'float',
+        userClass: '',
+        isVisible: true,
+        myStyle: {
+            width: '100px',
+            height: '150px',
+            backgroundColor: 'gray'
+        },
+        progressBar: {
+            width: '0px',
+            backgroundColor: 'red'
         }
     },
     methods: {
@@ -46,6 +58,14 @@ new Vue({
                 vm.effectClasses.highlight = !vm.effectClasses.highlight
                 vm.effectClasses.shrink = !vm.effectClasses.shrink
             }, 1000);
+        },
+        startProgress: function() {
+            var vm = this
+            wid = 0
+            setInterval(function() {
+                vm.progressBar.width = wid + 'px'
+                wid += 10
+            }, 1000)
         }
     }
 })

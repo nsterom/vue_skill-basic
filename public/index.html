@@ -49,6 +49,29 @@
                 <button @click="startEffect">Start Effect</button>
                 <div id="effect" v-bind:class="effectClasses"></div>
             </div>
+
+            <div v-bind:class="[float, 'blue', 'text-color']">class arrray</div>
+
+            <div>
+                <input type="text" v-model="userClass">
+                <div v-bind:class="[{visible: true}, userClass]">{{ userClass }}</div>
+            </div>
+
+            <div>
+                <input type="text" v-model="userClass">
+                <input type="text" v-model="isVisible">
+                <div v-bind:class="[{visible: isVisible}, userClass]"></div>
+            </div>
+
+            <div>
+                <input type="text" v-model="myStyle.backgroundColor">
+                <div :style="myStyle">{{ myStyle }}</div>
+            </div>
+
+            <div>
+                <button @click="startProgress">Start Progress</button>
+                <div v-bind:class="['progress-bar']" v-bind:style="progressBar"></div>
+            </div>
         </div>
 
         <script src="scripts/exercise.js"></script>
