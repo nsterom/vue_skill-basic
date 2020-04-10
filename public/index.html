@@ -47,7 +47,7 @@
         <div id="styleex">
             <div>
                 <button @click="startEffect">Start Effect</button>
-                <div id="effect"></div>
+                <div id="effect" v-bind:class="effectClasses"></div>
             </div>
         </div>
 
