@@ -5,6 +5,29 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+
+        <div id="ifforex">
+            <button @click="show = !show">Toggle</button>
+            <p v-if="show">You either see me...</p>
+            <p v-show="show">... or me</p>
+            <hr>
+            <ul>
+                <li v-for="(friend, index) in friends">{{ friend }} ({{ index }})</li>
+            </ul>
+            <hr>
+            <p v-for="(value, key) in lor">{{ key }}:{{ value }}</p>
+            <hr>
+            <ul>
+                <li v-for="value in tObj">
+                    <template v-if="Array.isArray(value)">
+                        <div v-for="num in value">{{ num }}</div>
+                    </template>
+                    <template v-else>{{ value }}</template>
+                </li>
+                
+            </ul>
+        </div>
+
         <div id="app">
             <input type="text" v-on:input="changeTitle">
             <p v-once>{{ title }}</p>

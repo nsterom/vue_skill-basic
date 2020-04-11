@@ -32,6 +32,22 @@ new Vue({
     }
 }),
 new Vue({
+    el: '#ifforex',
+    data: {
+        show: true,
+        friends: ['Peter', 'John', 'Mary'],
+        lor: {
+            title: 'Lord of the Rings',
+            author: 'J.R.R Tolkiens',
+            books: '3'
+        },
+        tObj: {
+            name: 'TESTOBJECT',
+            data: [1.67, 1.33, 0.98, 2.21]
+        }
+    }
+}),
+new Vue({
     el: '#styleex',
     data: {
         effectClasses: {
